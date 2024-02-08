@@ -2,9 +2,9 @@ use budgr_tui::app::{App, AppResult};
 use budgr_tui::event::{Event, EventHandler};
 use budgr_tui::handler::handle_key_events;
 use budgr_tui::tui::Tui;
-use std::io;
 use ratatui::backend::CrosstermBackend;
 use ratatui::Terminal;
+use std::io;
 
 fn main() -> AppResult<()> {
     // Create an application.
