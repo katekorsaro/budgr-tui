@@ -227,7 +227,9 @@ fn operation_list(app: &mut App, frame: &mut Frame) {
         .widths(widths)
         .header(header)
         .block(block)
+        .highlight_style(Style::new().black().on_white())
         .column_spacing(2);
-
-    frame.render_widget(table, frame.size());
+    let mut table_state = TableState::default();
+    table_state.select(Some(2));
+    frame.render_stateful_widget(table, frame.size(), &mut table_state);
 }
